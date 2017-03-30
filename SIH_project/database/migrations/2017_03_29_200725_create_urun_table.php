@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCollegesTable extends Migration
+class CreateUrunTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class CreateCollegesTable extends Migration
      */
     public function up()
     {
-        Schema::create('colleges', function (Blueprint $table) {
+        Schema::create('urun', function (Blueprint $table) {
             Schema::enableForeignKeyConstraints();
-            $table->increments('cid');
-            $table->text('cname');
-            $table->text('state');
-            $table->text('city');
+            $table->increments('id');
+            $table->integer('coid')->unsigned();
+            $table->foreign('coid')->references('coid')->on('courses')->onDelete('cascade');
             $table->integer('uid')->unsigned();
             $table->foreign('uid')->references('uid')->on('universities')->onDelete('cascade');
+            $table->date('start_date');
+            $table->date('end_date');
             $table->enum('mode',['regular','distance']);
             
         });
@@ -33,6 +34,6 @@ class CreateCollegesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('colleges');
+        Schema::dropIfExists('urun');
     }
 }
