@@ -15,10 +15,9 @@ class CreateUniversitiesTable extends Migration
     {
         Schema::create('universities', function (Blueprint $table) {
             $table->increments('uid');
-            $table->string('uname');
-             $table->string('city');
-            $table->string('state');
-            $table->timestamps();
+            $table->text('uname');
+            $table->text('state');
+            $table->text('city');
         });
     }
 
