@@ -21,7 +21,7 @@ class CreateCollegesTable extends Migration
             $table->text('city');
             $table->integer('uid')->unsigned()->nullable();
             $table->foreign('uid')->references('uid')->on('universities')->onDelete('cascade');
-            $table->enum('mode',['regular','distance']);
+           
             
         });
     }

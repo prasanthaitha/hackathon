@@ -16,6 +16,7 @@ class CreateUcategoriesTable extends Migration
         Schema::create('ucategories', function (Blueprint $table) {
             Schema::enableForeignKeyConstraints();
             $table->enum('category',['Engineering','Medical','Law','Arts','Commerce','Management','Sciences','Design']);
+            
             $table->integer('uid')->unsigned();
 
             $table->primary(['category', 'uid']);

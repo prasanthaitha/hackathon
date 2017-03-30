@@ -16,6 +16,7 @@ class CreateColcategoriesTable extends Migration
         Schema::create('colcategories', function (Blueprint $table) {
             Schema::enableForeignKeyConstraints();
             $table->enum('category',['Engineering','Medical','Law','Arts','Commerce','Management','Sciences','Design']);
+            
             $table->integer('cid')->unsigned();
 
             $table->primary(['category', 'cid']);

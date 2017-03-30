@@ -19,9 +19,9 @@ class CreateUrunTable extends Migration
             $table->foreign('coid')->references('coid')->on('courses')->onDelete('cascade');
             $table->integer('uid')->unsigned();
             $table->foreign('uid')->references('uid')->on('universities')->onDelete('cascade');
-            $table->date('start_date');
-            $table->date('end_date');
-            $table->enum('mode',['regular','distance']);
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
+            $table->enum('mode',['Regular','Distance','Regular and Distance']);
             
         });
     }

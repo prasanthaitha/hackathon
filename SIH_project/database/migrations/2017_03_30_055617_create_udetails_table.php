@@ -16,7 +16,7 @@ class CreateUdetailsTable extends Migration
         Schema::create('udetails', function (Blueprint $table) {
             Schema::enableForeignKeyConstraints();
             $table->integer('uid')->unsigned();
-            $table->string('type');
+            
             $table->string('aicte_id')->nullable();
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
@@ -25,6 +25,7 @@ class CreateUdetailsTable extends Migration
             $table->string('city');
             $table->string('state');
             $table->string('website');
+             $table->enum('type',['Government','Private','Semi-Government']);
 
             $table->primary(['uid']);
 

@@ -16,7 +16,7 @@ class CreateColdetailsTable extends Migration
         Schema::create('coldetails', function (Blueprint $table) {
             Schema::enableForeignKeyConstraints();
             $table->integer('cid')->unsigned();
-            $table->string('type');
+             $table->enum('type',['Government','Private','Semi-Government']);
             $table->string('aicte_id')->nullable();
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();

@@ -17,8 +17,9 @@ class CreateCrunsTable extends Migration
             Schema::enableForeignKeyConstraints();
             $table->integer('cid')->unsigned();
             $table->integer('coid')->unsigned();
-            $table->date('start_date');
-            $table->date('end_date');
+            $table->date('start_date')->nullable();
+
+            $table->date('end_date')->nullable();
             $table->enum('mode',['regular','distance']);
             
             $table->primary(['cid', 'coid']);

@@ -22,7 +22,7 @@ class CreateCoursesTable extends Migration
             $table->enum('level',['UG','PG','Diploma']);
             $table->integer('duration')->nullable();
             $table->enum('category',['Engineering','Medical','Law','Arts','Commerce','Management','Sciences','Design']);
-            
+             $table->enum('mode',['Regular','Distance','Regular and Distance']);
         });
     }
 

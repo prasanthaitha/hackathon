@@ -17,7 +17,7 @@ class CreatePeopleTable extends Migration
             Schema::enableForeignKeyConstraints();
             $table->increments('pid');
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('mobile');
             $table->rememberToken();
             $table->timestamps();
