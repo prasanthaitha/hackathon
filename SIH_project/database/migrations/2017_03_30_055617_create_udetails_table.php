@@ -24,6 +24,7 @@ class CreateUdetailsTable extends Migration
             $table->integer('pincode');
             $table->string('city');
             $table->string('state');
+            $table->string('website');
 
             $table->primary(['uid']);
 
