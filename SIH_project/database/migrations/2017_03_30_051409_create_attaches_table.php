@@ -14,7 +14,12 @@ class CreateAttachesTable extends Migration
     public function up()
     {
         Schema::create('attaches', function (Blueprint $table) {
-            $table->increments('id');
+
+            $table->integer('rid')->unsigned();
+          
+            $table->string('doc');
+            $table->primary(['rid','doc']);
+            $table->foreign('rid')->references('rid')->on('reports')->onDelete('cascade');
             $table->timestamps();
         });
     }
