@@ -12,8 +12,19 @@ class UploadController extends Controller
         return view('upload_form');
     }
  
-    public function uploadSubmit(Request $request)
+
+    public function uploadSubmit(UploadRequest $request)
     {
-        // Coming soon...
+        $report = Report::create($request->all());
+        foreach ($request->photos as $photo) {
+            $doc = $photo->store('photos');
+            Attach::create([
+                'rid' => $report->rid,
+                'doc' => doc
+            ]);
+        }
+        return 'Upload successful!';
+  
+   
     }
-}
+}   
