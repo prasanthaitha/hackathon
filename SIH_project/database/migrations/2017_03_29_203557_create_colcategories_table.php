@@ -14,6 +14,7 @@ class CreateColcategoriesTable extends Migration
     public function up()
     {
         Schema::create('colcategories', function (Blueprint $table) {
+            Schema::enableForeignKeyConstraints();
             $table->string('c_category');
             $table->integer('cid')->unsigned();
 

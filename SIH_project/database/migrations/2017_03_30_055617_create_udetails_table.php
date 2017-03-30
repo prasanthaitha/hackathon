@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateColdetailsTable extends Migration
+class CreateUdetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateColdetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('coldetails', function (Blueprint $table) {
+        Schema::create('udetails', function (Blueprint $table) {
             Schema::enableForeignKeyConstraints();
-            $table->integer('cid')->unsigned();
+            $table->integer('uid')->unsigned();
             $table->string('type');
             $table->string('aicte_id')->nullable();
             $table->date('start_date')->nullable();
@@ -25,9 +25,9 @@ class CreateColdetailsTable extends Migration
             $table->string('city');
             $table->string('state');
 
-            $table->primary(['cid']);
+            $table->primary(['uid']);
 
-            $table->foreign('cid')->references('cid')->on('colleges')->onDelete('cascade');
+            $table->foreign('uid')->references('uid')->on('universities')->onDelete('cascade');
         });
     }
 
@@ -38,6 +38,6 @@ class CreateColdetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('coldetails');
+        Schema::dropIfExists('udetails');
     }
 }

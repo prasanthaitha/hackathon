@@ -15,12 +15,12 @@ class CreateCoursesTable extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->increments('coid');
-            $table->date('start_date');
-            $table->date('end_date');
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
             $table->string('branch');
             $table->string('degree');
-            $table->enum('level',['ug','pg','diploma']);
-            $table->integer('duration');
+            $table->enum('level',['UG','PG','Diploma']);
+            $table->integer('duration')->nullable();
             
         });
     }

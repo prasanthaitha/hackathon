@@ -14,6 +14,7 @@ class CreateCrunsTable extends Migration
     public function up()
     {
         Schema::create('cruns', function (Blueprint $table) {
+            Schema::enableForeignKeyConstraints();
             $table->integer('cid')->unsigned();
             $table->integer('coid')->unsigned();
             $table->date('start_date');

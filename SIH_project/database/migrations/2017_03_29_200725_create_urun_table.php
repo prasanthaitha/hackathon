@@ -15,7 +15,6 @@ class CreateUrunTable extends Migration
     {
         Schema::create('urun', function (Blueprint $table) {
             Schema::enableForeignKeyConstraints();
-            $table->increments('id');
             $table->integer('coid')->unsigned();
             $table->foreign('coid')->references('coid')->on('courses')->onDelete('cascade');
             $table->integer('uid')->unsigned();

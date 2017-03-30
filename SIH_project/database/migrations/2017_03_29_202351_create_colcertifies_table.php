@@ -14,6 +14,7 @@ class CreateColcertifiesTable extends Migration
     public function up()
     {
         Schema::create('colcertifies', function (Blueprint $table) {
+            Schema::enableForeignKeyConstraints();
             $table->string('c_ministry');
             $table->integer('cid')->unsigned();
 
