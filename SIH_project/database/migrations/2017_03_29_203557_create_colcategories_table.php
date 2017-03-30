@@ -15,10 +15,10 @@ class CreateColcategoriesTable extends Migration
     {
         Schema::create('colcategories', function (Blueprint $table) {
             Schema::enableForeignKeyConstraints();
-            $table->string('c_category');
+            $table->enum('category',['Engineering','Medical','Law','Arts','Commerce','Management','Sciences','Design']);
             $table->integer('cid')->unsigned();
 
-            $table->primary(['c_category', 'cid']);
+            $table->primary(['category', 'cid']);
 
             $table->foreign('cid')->references('cid')->on('colleges')->onDelete('cascade');
         });

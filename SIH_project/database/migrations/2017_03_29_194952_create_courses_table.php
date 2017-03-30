@@ -21,6 +21,7 @@ class CreateCoursesTable extends Migration
             $table->string('degree');
             $table->enum('level',['UG','PG','Diploma']);
             $table->integer('duration')->nullable();
+            $table->enum('category',['Engineering','Medical','Law','Arts','Commerce','Management','Sciences','Design']);
             
         });
     }

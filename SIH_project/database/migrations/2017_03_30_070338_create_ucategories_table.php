@@ -15,10 +15,10 @@ class CreateUcategoriesTable extends Migration
     {
         Schema::create('ucategories', function (Blueprint $table) {
             Schema::enableForeignKeyConstraints();
-            $table->string('u_category');
+            $table->enum('category',['Engineering','Medical','Law','Arts','Commerce','Management','Sciences','Design']);
             $table->integer('uid')->unsigned();
 
-            $table->primary(['u_category', 'uid']);
+            $table->primary(['category', 'uid']);
 
             $table->foreign('uid')->references('uid')->on('universities')->onDelete('cascade');
         });
