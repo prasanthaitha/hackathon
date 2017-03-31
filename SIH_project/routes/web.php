@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/search','SearchController@search');
+Route::get('/search/filter','SearchController@filter')->name('univ');
+
 
 
 
