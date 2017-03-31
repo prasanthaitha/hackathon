@@ -15,8 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
+Route::post('send','mailController@send');
+Route::get('email','mailController@email');
 
 
 Auth::routes();
