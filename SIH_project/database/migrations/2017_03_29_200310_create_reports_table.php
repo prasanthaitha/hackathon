@@ -28,8 +28,8 @@ class CreateReportsTable extends Migration
             $table->string('repname',20);
             $table->string('message')->nullable();
             $table->string('ticket')->unique();
-            $table->integer('pid')->unsigned()->nullable();
-            $table->foreign('pid')->references('pid')->on('people')->onDelete('cascade');
+            $table->integer('id')->unsigned()->nullable();
+            $table->foreign('id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
