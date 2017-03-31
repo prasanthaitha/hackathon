@@ -20,7 +20,7 @@ class CreateCrunsTable extends Migration
             $table->date('start_date')->nullable();
 
             $table->date('end_date')->nullable();
-            $table->enum('mode',['regular','distance']);
+            $table->enum('mode',['Regular','Distance','Regular and Distance']);
             
             $table->primary(['cid', 'coid']);
 
