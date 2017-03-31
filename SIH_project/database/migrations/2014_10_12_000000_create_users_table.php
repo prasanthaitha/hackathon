@@ -18,8 +18,8 @@ class CreateUsersTable extends Migration
             Schema::enableForeignKeyConstraints();
             $table->increments('id');
             $table->string('name');
-            $table->string('email',50)->unique();
-            $table->string('password',10);
+            $table->string('email')->unique();
+            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
             

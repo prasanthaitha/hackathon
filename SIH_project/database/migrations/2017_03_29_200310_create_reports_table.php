@@ -21,7 +21,7 @@ class CreateReportsTable extends Migration
             $table->integer('pincode')->length(6)->nullable();
             $table->string('state');
             $table->string('degree')->nullable();
-             $table->enum('category',['Engineering','Medical','Law','Arts','Commerce','Management','Sciences','Design']);
+            $table->enum('category',['Engineering','Medical','Law','Arts','Commerce','Management','Sciences','Design']);
             $table->string('college_name');
             $table->string('course_name')->nullable();
             $table->string('branch')->nullable();
