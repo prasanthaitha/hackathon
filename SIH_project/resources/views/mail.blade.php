@@ -5,6 +5,6 @@
     <title>Document</title>
 </head>
 <body>
-	<h1> Welcome to Mail System </h1>
+	<h1> Welcome </br> {{$name}}</h1>
 </body>
 </html>
