@@ -3,9 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Mail;
+use App\Mail\verifyEmail;
+use Session;
 
 class RegisterController extends Controller
 {
@@ -61,11 +65,43 @@ class RegisterController extends Controller
      * @return User
      */
     protected function create(array $data)
-    {
-        return User::create([
+    {   
+        Session::flash('status','Registered! but verify your email to activate your account');
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'verifyToken'=> Str::random(40),
         ]);
+
+        $thisUser = User::findOrFail($user->id);
+        $this->sendEmail($thisUser);
+        return $user;
+    }
+
+
+    public function verifyEmailFirst(){
+
+        return view('email.verifyEmailFirst');
+    }
+
+    public function sendEmail($thisUser)
+    {
+        Mail::to($thisUser['email'])->send(new verifyEmail($thisUser));
+    }
+
+    public function sendEmailDone($email,$verifyToken)
+    {
+        $user = User::where(['email'=>$email,'verifyToken'=>$verifyToken])->first();
+        if($user)
+        {
+            user::where(['email'=>$email,'verifyToken'=>$verifyToken])->update(['status'=>'1','verifyToken'=>NULL]);
+            return redirect('login');
+        }
+
+        else
+        {
+            return 'user not found';
+        }
     }
 }
