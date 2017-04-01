@@ -1,19 +1,22 @@
 <ul>
-@foreach($univ as $uni)
-   <li<ul>{{$uni->uname}}
-   <li>{{$uni->city}}</li>
-@endforeach
 
+	@foreach($univ as $uni)
+	   <li>{{$uni->uname}}</li>
+	   <li>{{$uni->city}}</li>
+	@endforeach
 
-<form action="/search/filter" method="get">
+  </ul>
+
+<form action="/filter" method="get">
 <div class="col s3" style="padding:5px;">
         <!-- Grey navigation panel -->
-           <!-- Dropdown Trigger -->
+            Dropdown Trigger 
           <br>
           <br>
       <label>category</label>
   <select class="browser-default" name="category">
     <option value="" disabled selected>Select programme</option>
+<input type="hidden" name="universe" value="{{$univ->">
     <option value="1" id="1">engineering</option>
     <option value="2" id="2">medical</option>
     <option value="3" id="3">law</option>
@@ -44,7 +47,7 @@
           <br>
           <br>
           <input type="submit" value="submit">
-     <!--     
+         
           <label>Browser Select</label>
   <select class="browser-default">
     <option value="" disabled selected>Select state</option>
@@ -52,8 +55,8 @@
     <option value="1">New Delhi</option>
     <option value="2">Andhra Pradesh</option>
     <option value="3">Uttar Pradesh</option>
-  </select>-->
-    </div>
-    </form>
+  </select>
+    </div>      
+    </form> 
   </body>
   </html>
