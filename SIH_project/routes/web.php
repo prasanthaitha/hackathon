@@ -15,8 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::post('send','mailController@send');
 Route::get('email','mailController@email');
+
+Route::get('/search','SearchController@search');
+Route::get('/search/filter','SearchController@filter')->name('univ');
+
+
 
 
 Auth::routes();
