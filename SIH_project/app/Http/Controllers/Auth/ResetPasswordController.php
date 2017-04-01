@@ -10,11 +10,7 @@ class ResetPasswordController extends Controller
     /*
     |--------------------------------------------------------------------------
     | Password Reset Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller is responsible for handling password reset requests
-    | and uses a simple trait to include this behavior. You're free to
-    | explore this trait and override any methods you wish to tweak.
+    |------------------------------------------------------------------------- to tweak.
     |
     */
 
@@ -23,13 +19,12 @@ class ResetPasswordController extends Controller
     /**
      * Where to redirect users after resetting their password.
      *
-     * @var string
-     */
+     * @var string-
+         */
     protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
-     *
      * @return void
      */
     public function __construct()

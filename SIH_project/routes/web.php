@@ -18,6 +18,19 @@ Route::get('/', function () {
 Route::get('/','SearchController@search');
 //Route::get('/search/filter','SearchController@filter')->name('univ');
 
+
 //Route::get('/filter','SearchController@filter');
 
+Route::post('send','mailController@send');
+Route::get('email','mailController@email');
 
+//Route::get('/search','SearchController@search');
+//Route::get('/search/filter','SearchController@filter')->name('univ');
+
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

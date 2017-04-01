@@ -21,15 +21,15 @@ class CreateReportsTable extends Migration
             $table->integer('pincode')->length(6)->nullable();
             $table->string('state');
             $table->string('degree')->nullable();
-             $table->enum('category',['Engineering','Medical','Law','Arts','Commerce','Management','Sciences','Design']);
+            $table->enum('category',['Engineering','Medical','Law','Arts','Commerce','Management','Sciences','Design']);
             $table->string('college_name');
             $table->string('course_name')->nullable();
             $table->string('branch')->nullable();
             $table->string('repname',20);
             $table->string('message')->nullable();
             $table->string('ticket')->unique();
-            $table->integer('pid')->unsigned()->nullable();
-            $table->foreign('pid')->references('pid')->on('people')->onDelete('cascade');
+            $table->integer('id')->unsigned()->nullable();
+            $table->foreign('id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
