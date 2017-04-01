@@ -11,7 +11,7 @@ class EditorController extends Controller
     {
         
         $this->middleware('auth:admin');
-        $this->middleware('editor',['except'=>'test']);
+        $this->middleware('editor',['except'=>'test']); //only admins can see middleware.
     } 
 
     public function index()

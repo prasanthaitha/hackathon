@@ -1,1 +1,1 @@
-<h1>Verify Email To Activate Account</h1>
+ <h1>Verify Email To Activate Account</h1>
