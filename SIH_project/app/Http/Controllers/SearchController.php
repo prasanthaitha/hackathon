@@ -5,39 +5,198 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\University;
 use App\Ucategory;
-
-	
-
+use Illuminate\Support\Facades\Input;
+use Session;
+use Illuminate\Support\Facades\Redirect;
+use App\Udetail;
 class SearchController extends Controller
 
 
-{
-
-	public $univ;
+{		
 
 		    public function search(Request $request)
 		{
+
+
+
 		   $q=$request->input('university');
 		   $r=$request->input('city');
-		  // {{config('global.univ')}}
-		   $univ=University::where('uname','LIKE','%'.$q.'%')->where('city','LIKE','%'.$r.'%')->get();
+            
+		   if($q==NULL && $r==NULL)
+		   	{ $univs=NULL;
+		   	return view('welcome',compact('univs'));
+            }
+
+
+		else{
+		   $key=$request->category;
+		   $key2=$request->type;
+
+		      
+		   $univs=University::where('uname','LIKE','%'.$q.'%')->where('city','LIKE','%'.$r.'%')->get();
+
+            if(empty($univs[0])){
+                       return 'nothing found';
+                                }
+            else{
+                  	/*if(!empty($key)){
+			     	$i=0;
+	              	foreach($univs as $univ)
+			        {	$v[$i]=Ucategory::where('uid','=',$univ->uid)->where('category','=',$key)->get();
+			        	$i=$i+1;
+	              	}
+	             
+	                 if(empty($v[0])){
+			         	 return 'nothing found';}
+					  
+					  }
+
+					  if(empty($key)){
+					  	$v=$univs;
+					  }
+
+					  if(!empty($key2)){
+					        
+			
+			        $j=0;
+			        $y=0;
+			        //return $i;
+			        while($j<$i){
+			        	//return $v[0];
+			        	$xs=$v[$j];
+			        	//return $xs;
+				        foreach($xs as $x){
+				        	$k[$y]=Udetail::where('uid','=',$x->uid)->where('type','=',$key2)->get();
+				        	$y=$y+1;
+				        } 
+				     	$j=$j+1;
+				     }
+		   
+			        if(empty($k[0]))
+			        {	return 'nothing found';
+			        }}
+			    if(empty($key2)){
+					  	$k=$univs;
+					  }
+
+				$j1=0;
+			        $y1=0;
+			        //return $i;
+			        while($j1<$y){
+			        	//return $v[0];
+			        	$xs1=$k[$j1];
+				        foreach($xs1 as $xs){
+				        	$u[$y1]=University::where('uid','=',$xs->uid)->get(['uname','city']);
+				        	$y1=$y1+1;
+				        }
+				        $j1=$j1+1;
+
+
+				     }
+	               
+
+		             return view('welcome',compact('u'));}*/
+
+
+		             if($key==NULL && $key2==NULL)
+		            {
+
+		            	return view('welcome',compact('univs'));
+					}
+
+					else if($key==NULL)
+						{
+
+
+							$i=0;
+	              			foreach($univs as $univ)
+			       			 {	$v[$i]=Udetail::where('uid','=',$univ->uid)->where('type','=',$key2)->get();
+			        				$i=$i+1;
+	              			}
+	             			
+	             			$univs = $v;
+	              			return view('welcome',compact('univs'));
+								 
+						}	
+
+					else if($key2==NULL)
+						{
+
+
+							$j=0;
+	              			foreach($univs as $univ)
+			       			 {	$v[$j]=Ucategory::where('uid','=',$univ->uid)->where('category','=',$key)->get();
+			        				$j=$j+1;
+	              			}
+	             			
+	             			$univs = $v;
+	              			return view('welcome',compact('univs'));
+								 
+						}	
+					else if($key!=NULL && $key2!=NULL)
+					{
+
+
+							$i=0;
+	              			foreach($univs as $univ)
+			       		 	{$v[$i]=Ucategory::where('uid','=',$univ->uid)->where('category','=',$key)->get();
+			        		$i=$i+1;
+	              			}
+
+	              			if(empty($v))
+	              				return "nothing found";
+
+			      			  $j=0;
+			      			  $y=0;
+			      
+			       			 while($j<$i){
+			        
+			        		$xs=$v[$j];
+			        	
+				      		 foreach($xs as $x){
+				        	$k[$y]=Udetail::where('uid','=',$x->uid)->where('type','=',$key2)->get();
+				        	$y=$y+1;
+				       		 } 
+				     		$j=$j+1;
+				     	}
+                        
+				     		if(empty($k))
+				     			return "nothing found";
+                            else{
+                            	$univs=$k;
+				     		return view('welcome',compact('univs'));
+				     }}
+
+
+
+
+
+					}
+		/*
+		   //$k=$univ;
+		  // Session::flash('values',$passvalues);
+		   //Redirect::to('/search');
 		   //$city=University::all();
-		 return view('search',compact('univ'));
-
-		 return $this->filter(compact('univ'));
-		  
+		//return view('search',compact('univ'));
+        
+		 //return this->filter($univ
 		}
+		
 
+ 
+		public function filter(request $request)
+		{
+			return $k;
 
-		public function filter(Request $request,$univ)
-		{   
-
-		     $key=$request->category;
+			//ldinput = Session::get('values');
+			//return $oldinput;
+		}
+		   /* $key=$request->category;
 
 		     //return $key;
-		//return view('search1',compact('key'));
+		return view('search1',compact('key'));
 
-
+/*
 		     switch($key)
 		       {
 
@@ -48,7 +207,7 @@ class SearchController extends Controller
 		           case 2:
 		           $u=Ucategory::where('category','=','Medical')->get();
 		            break;
-		*/ 
+		
 		            $u=Ucategory::where('category','=','Engineering')->where(function($query) use ($univ){
 		       
 		        if(isset($univ)){
@@ -63,8 +222,8 @@ class SearchController extends Controller
 		       return view('search1',compact('u'));
 
 		          } 
-
-
+/*/
+}}
        }
 
 
