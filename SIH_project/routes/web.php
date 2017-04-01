@@ -28,6 +28,8 @@ Route::get('email','mailController@email');
 //Route::get('/search/filter','SearchController@filter')->name('univ');
 
 
+Route::get('verifyEmailFirst','Auth\RegisterController@verifyEmailFirst')->name('verifyEmailFirst');
+Route::get('verify/{email}/{verifyToken}','Auth\RegisterController@sendEmailDone')->name('sendEmailDone');
 
 
 Auth::routes();
