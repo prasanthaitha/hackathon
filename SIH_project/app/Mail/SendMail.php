@@ -30,7 +30,7 @@ class SendMail extends Mailable
      */
     public function build(Request $request)
     {
-        $user = user::find(2); //finding that user
+        $user = user::find($request->id); //finding that user
         return $this->view('mail',['name'=>$user->name])->to($user->email);
     }
 }
