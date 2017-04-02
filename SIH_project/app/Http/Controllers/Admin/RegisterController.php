@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Admin;
+
 
 use App\User;
-use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Str;
 use Mail;
 use App\Mail\verifyEmail;
 use Session;
@@ -31,7 +32,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = 'admin/home';
 
     /**
      * Create a new controller instance.
@@ -40,7 +41,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('guest:admin');
     }
 
     /**
@@ -65,43 +66,37 @@ class RegisterController extends Controller
      * @return User
      */
     protected function create(array $data)
-    {   
+    {
         Session::flash('status','Registered! but verify your email to activate your account');
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
-            'verifyToken'=> Str::random(40),
-        ]);
-
+            'verifyToken' => Str::random(40),
+        ]); 
         $thisUser = User::findOrFail($user->id);
-        $this->sendEmail($thisUser);
+
+        $this->sendEmail($thisUser);  
+
         return $user;
     }
 
-
     public function verifyEmailFirst(){
-
         return view('email.verifyEmailFirst');
     }
 
-    public function sendEmail($thisUser)
-    {
+    public function sendEmail($thisUser){
         Mail::to($thisUser['email'])->send(new verifyEmail($thisUser));
     }
 
-    public function sendEmailDone($email,$verifyToken)
-    {
+    public function sendEmailDone($email,$verifyToken){
         $user = User::where(['email'=>$email,'verifyToken'=>$verifyToken])->first();
-        if($user)
-        {
-            user::where(['email'=>$email,'verifyToken'=>$verifyToken])->update(['status'=>'1','verifyToken'=>NULL]);
-            return redirect('login');
-        }
+        if($user){
+            return user::where(['email'=>$email,'verifyToken'=>$verifyToken])->update(['status'=>'1','verifyToken'=>NULL]);
 
-        else
-        {
+        }else{
             return 'user not found';
         }
     }
+
 }
