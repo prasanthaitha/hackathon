@@ -87,6 +87,78 @@ class ReportController extends Controller
      		
      		}
 		
-		
+	public function repindex(){
+    	$reports = Report::all();
+    	return view('report.repinfo',compact('reports'));
+    }
+
+    public function repnewReport(){
+    	
+    	return view('report.repinsert');
+    }
+
+
+    public function repedit($id){
+    	$reports = Report::where('rid',$id)->first()->get();
+    	return view('report.repupdate',compact($reports->status));
+    }
+
+
+    public function repdelete($id){
+    	University::where('rid',$id)->delete();
+    	return back();
+    	
+    }
+
+
+    public function repsave(ReportRequest $request){
+    	for($i=0;$i<20;$i++){
+
+    		$r = new Report;
+
+    		$r->locality=$request->input('locality');
+            $r->state=$request->input('state');
+             $r->city=$request->input('city');
+                       
+                        $r->status=$request->input('status');
+                       
+                        $r->locality=$request->input('locality');
+                       
+                        $r->ticket=$request->input('ticket');
+                       
+                       
+                        $r->message=$request->input('message');
+                       
+                        $r->branch=$request->input('branch');
+                       
+                        $r->course_name=$request->input('course_name');
+                        $r->college_name=$request->input('college_name');
+                        $r->degree=$request->input('degree');
+
+                       
+
+
+			$r->save();
+
+		}
+		return back()->withInput();
+	}
+    	
+    public function repupdateInfo(ReportRequest $request){
+	
+	$r=new Report;
+	$data = array('status'=>$request->input('status'));
+
+	$r->where('rid',$request->input('rid'))->update($data);
+	return redirect('/');
+    }	
+
+
+    public function pending()
+    {
+    $rep->Report::where('status','=',0)->get();
+    return view('admin.pending',compact('rep');
+
+    }
 	
 }

@@ -62,4 +62,26 @@ Route::get('showreport','AdminController@show');
 
 
 
+Route::get('/showdetails','UniversityController@index');
+Route::get('new','UniversityController@newUniversity');
+Route::get('save','UniversityController@save');
+Route::get('edit/{id}','UniversityController@edit');
+Route::get('delete/{id}','UniversityController@delete');
+Route::post('updateInfo','UniversityController@updateInfo');
+
+Route::get('/repshowdetails','ReportController@repindex');
+Route::get('repnew','ReportController@repnewReport');
+Route::get('repsave','ReportController@repsave');
+Route::get('repedit/{id}','ReportController@repedit');
+Route::get('repdelete/{id}','ReportController@repdelete');
+Route::post('repupdateInfo','ReportController@repupdateInfo');
+Route::get('/started',function()
+
+{
+	return view('admin.started');
+});
+Route::get('/pendingreports','ReportController@pending');
+
+
+
 
