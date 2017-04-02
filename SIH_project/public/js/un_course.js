@@ -1,4 +1,13 @@
-var app = angular.module("myModule" , []).controller("mycontroller", function($scope){
+var app = angular.module("myModule" ,[],function($interpolateProvider)
+{
+    $interpolateProvider.startSymbol('<%');
+     $interpolateProvider.endSymbol('%>');
+});
+
+
+
+
+app.controller("mycontroller", function($scope){
      
     var mytable = [
         {course:"B. Arch",college:"Technical college of Engineering",city:"Noida",state:" Uttar Pradesh"},

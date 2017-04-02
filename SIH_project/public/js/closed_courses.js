@@ -1,4 +1,12 @@
-var app = angular.module("myModule" , []).controller("mycontroller", function($scope){
+var app = angular.module("myModule" , [],function($interpolateProvider)
+{
+    $interpolateProvider.startSymbol('<%');
+     $interpolateProvider.endSymbol('%>');
+});
+
+
+
+app.controller("mycontroller", function($scope){
      
     var mytable = [
         {aicte_id:"1-2814148034	",institute_name:"KUPPAM ENGINEERING COLLEGE",institute_type:"Unaided - Private	",State:"Andhra Pradesh	",district:"CHITTOOR",university:"Jawaharlal Nehru Technological University, Anantapur	",level:"UNDER GRADUATE	",course:"INFORMATION TECHNOLOGy"},

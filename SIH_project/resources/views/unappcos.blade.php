@@ -25,9 +25,9 @@
               <script src="startjs.js"></script>
     
     
-    <script src="F:\js\Final/angular.min.js"></script>
-    <script src="F:\js\Final/un_course.js"></script>
-    <link href="css1.css" rel="stylesheet" />
+    <script src="asset{{'js/angular.min.js'}}"></script>
+    <script src="asset{{'js/un_course.js'}}"></script>
+    <link href="/css/css1.css" rel="stylesheet" />
 </head>
 <body ng-app = "myModule" class="#b2dfdb teal lighten-4" >
     
@@ -71,14 +71,13 @@
     </thead>
     <tbody>
     <tr ng-repeat="a in mytable| filter:searchText"  style="font-size:20px;font-family:georgia,serif;">
-    <td>{{a.course}}</td>
-    <td>{{a.college}}</td>
-    <td>{{a.city}}</td>
-    <td>{{a.state}}</td>
+    <td><% a.course %></td>
+    <td><% a.college %></td>
+    <td><% a.city%></td>
+    <td> <% a.state %></td>
     </tr>
     </tbody>
-    </table>
-    </div>
+    </table>    </div>
     </div>
     
 
@@ -94,5 +93,5 @@
 </body>
 
 
-       
+
 </html>

@@ -13,7 +13,7 @@ class CreateUrunsTable extends Migration
      */
     public function up()
     {
-        Schema::create('uruns', function (Blueprint $table) {
+       Schema::create('uruns', function (Blueprint $table) {
             Schema::enableForeignKeyConstraints();
             $table->integer('coid')->unsigned();
             $table->foreign('coid')->references('coid')->on('courses')->onDelete('cascade');
@@ -33,6 +33,6 @@ class CreateUrunsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('urun');
+        Schema::dropIfExists('uruns');
     }
 }

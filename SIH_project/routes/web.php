@@ -89,7 +89,12 @@ Route::GET('admin-password/reset/{token}','Admin\ResetPasswordController@showRes
 
 Route::post('/reportx','ReportController@ReportNow');
 Route::get('/report','ReportController@ReportForm');
+Route::get('/course',function()
+{
+ return view('course');
+}
 
+	);
 
 
 Route::post('/report/check','ReportController@CheckStatus');
