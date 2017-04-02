@@ -56,6 +56,7 @@ Route::post('/report/check','ReportController@CheckStatus');
 Route::get('verifyEmailFirst','Auth\RegisterController@verifyEmailFirst')->name('verifyEmailFirst');
 Route::get('verify/{email}/{verifyToken}','Auth\RegisterController@sendEmailDone')->name('sendEmailDone');
 
+Route::get('upload','UploadController@index');
 
 
 
