@@ -59,8 +59,8 @@
          <h4 style="color:;font-family:georgia,serif;"> {{$udel2->uname}}<i class="medium material-icons left">business</i> </h4>@endforeach
           <h6 style="color:;font-family:georgia,serif;"> JSSATE CAMPUS UTTARAHALLI-KENGERI ROAD BANGALORE 560060 <i class="small material-icons left">location_on</i> </h6>
           <br>
-          
-          <h5 style="color:;font-family:georgia,serif;">Karnataka<i class="small material-icons left">language</i> </h5>
+           @foreach($udel as $udel2)
+          <h5 style="color:;font-family:georgia,serif;">{{$udel2->uname}}<i class="small material-icons left">language</i> </h5>
           <h5 style="color:;font-family:georgia,serif; padding:9px 90px;"><b>Basic Details</b><i class="small material-icons left">view_headline</i> </h5>
     <br>
           <div class="row">

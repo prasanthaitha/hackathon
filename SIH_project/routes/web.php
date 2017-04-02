@@ -73,8 +73,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-<<<<<<< HEAD
-=======
+
+
 Route::GET('admin/home','AdminController@index');
 Route::GET('admin/editor','EditorController@index');
 
@@ -94,5 +94,5 @@ Route::get('verify/{email}/{verifyToken}','Auth\RegisterController@sendEmailDone
 
 
 
->>>>>>> 8d430c9006f32228e10442f94192c4d3ed29d661
+
 
