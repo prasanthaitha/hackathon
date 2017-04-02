@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
@@ -7,6 +6,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\User;
+
 class verifyEmail extends Mailable
 {
     use Queueable, SerializesModels;
@@ -27,7 +27,7 @@ class verifyEmail extends Mailable
      *
      * @return $this
      */
-    public function build()
+    public function build() 
     {
         return $this->view('email.sendView');
     }

@@ -28,8 +28,6 @@ Route::get('email','mailController@email');
 //Route::get('/search/filter','SearchController@filter')->name('univ');
 
 
-Route::get('verifyEmailFirst','Auth\RegisterController@verifyEmailFirst')->name('verifyEmailFirst');
-Route::get('verify/{email}/{verifyToken}','Auth\RegisterController@sendEmailDone')->name('sendEmailDone');
 
 
 Auth::routes();
@@ -52,7 +50,12 @@ Route::post('/reportx','ReportController@ReportNow');
 Route::get('/report','ReportController@ReportForm');
 
 
+
 Route::post('/report/check','ReportController@CheckStatus');
+
+Route::get('verifyEmailFirst','Auth\RegisterController@verifyEmailFirst')->name('verifyEmailFirst');
+Route::get('verify/{email}/{verifyToken}','Auth\RegisterController@sendEmailDone')->name('sendEmailDone');
+
 
 
 
