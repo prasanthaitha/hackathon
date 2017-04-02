@@ -9,8 +9,17 @@
 
                 <div class="panel-body">
                     You are logged in as admin!
+
                 </div>
+                <br>
+                <br>
+                <h1 href='showreport'>Reports</h1>
+
+
+
             </div>
+
+
         </div>
     </div>
 </div>

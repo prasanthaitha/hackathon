@@ -58,6 +58,8 @@ Route::get('verify/{email}/{verifyToken}','Auth\RegisterController@sendEmailDone
 
 Route::get('upload','UploadController@index');
 
+Route::get('showreport','AdminController@show');
+
 
 
 

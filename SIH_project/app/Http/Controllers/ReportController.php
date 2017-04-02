@@ -61,7 +61,8 @@ class ReportController extends Controller
 
 		        
 		        $report->save(); // saving in db
-		        return 'your report is filed, Thank You';
+		        return $ticket.'is ur ticket no.';
+		        return 'your report is filed, Thank You'.$ticket.'is your ticket number';
 		 
 
    
