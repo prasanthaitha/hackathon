@@ -15,7 +15,7 @@
         <div class="col s12 m12">
           <div class="card">
              
-               <h3 class="center-align"> College-Info </h3>
+               <h3 class="center-align">  Engineering Colleges</h3>
             <div class="card-content col m4 center-align offset-m4">
 
                   <form >

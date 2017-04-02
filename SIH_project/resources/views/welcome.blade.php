@@ -36,7 +36,7 @@
 
 </head>
 
-<body class="parallax-demo" style="overflow-x:hidden;">
+<body class="parallax-demo" style=>
     <header>
 
 
@@ -74,15 +74,44 @@
             
             <div class="nav-content" style="background-color: #004040;">
                 <ul class="tabs tabs-transparent">
-                    <li class="tab"><a href="./list3.html">Unapproved Institute</a></li>
-                    <li class="tab"><a href="#">Unapproved Courses</a></li>
-                    <li class="tab"><a href="./list3.html">Closed Institutes</a></li>
-                    <li class="tab"><a href="/ccos">Closed Courses</a></li>
-                    <li class="tab"><a href="/dlp">Approved Distance Courses</a></li>
+                    <li class="tab" style="display:none;"><a href="./list3.html">Unapproved Institute</a></li>
+                    <li class="tab" style="display:none;"><a href="#">Unapproved Courses</a></li>
+                    <li class="tab" style="display:none;"><a href="./list3.html">Closed Institutes</a></li>
+                    <li class="tab" style="display:none;"><a href="/ccos">Closed Courses</a></li>
+                    <li class="tab" style="display:none;"><a href="/dlp">Approved Distance Courses</a></li>
                 </ul>
             </div>
             
-        </nav> <a href='/uncos'>Unapproved Courses</a>
+
+        </nav> 
+
+        <br> <br>
+        <div class="row">
+       <div class="col m2">
+        <a href='/uncos' style="color: #004040; font-family:'Ubuntu';"> Unapproved Institute</a>
+        </div>
+
+        <div class="col m2">
+               <a href='/uncos' style="color: #004040; font-family:'Ubuntu'" >Unapproved Courses</a>
+               </div>
+
+               <div class="col m2">
+               <a href='/uncos' style="color: #004040; font-family:'Ubuntu'">Closed Institutes</a>
+                </div>
+
+
+               <div class="col m2">
+               <a href='/uncos' style="color: #004040; font-family:'Ubuntu'">Closed Courses</a>
+               </div>
+
+               <div class="col m2">
+               <a href='/uncos' style="color: #004040; font-family:'Ubuntu'">Approved Distance Courses</a>
+               </div>
+
+               <div class="col m2">
+               <a href='www.nbaind.org/Files/AccreditedPrograms.aspx' style="color: #004040; font-family:'Ubuntu'">NAAC ACCREDITATED COURSES</a>
+               </div>    
+</div>
 
     </header>
     
@@ -452,6 +481,7 @@
                         <div class="row">
                             <div class="col s12 m6 offset-s1">
                                 <div class="card blue-grey darken-1">
+                               
                                     <div class="card-content white-text">
                                         <span class="card-title center" style="font-size:30px;"><u>Know When To Report</u></span>
                                         <br>
@@ -465,14 +495,14 @@
                                         </div>
                                         <br>
 
-
+                                     <form action="/report" method="get">
                                         <!--<button class="btn waves-effect waves-light right" type="submit" name="action" target="_blank" onclick="admin_login.html">Report
     <i class="material-icons right">send</i>
   </button>-->
 
-                                        <a href="./admin%20login.html" class="waves-effect waves-light btn">Submit<i class="material-icons right"></i></a>
+                                        <input type="submit" value="submit" class="waves-effect waves-light btn"><i class="material-icons right"></i></a>
 
-
+</form>
                                         <br>
 
                                     </div>
@@ -484,7 +514,7 @@
                                     <div class="card-content white-text">
                                         <span class="card-title center" style="font-size:30px;"><u>Report Status</u></span>
 
-                                        <form>
+                                        <form action="/ticket" method="get">
 
                                             <div class="row">
                                                 <div class="input-field col s12">
@@ -493,15 +523,16 @@
                                                 </div>
 
                                                 <div class="input-field col s12">
-                                                    <input id="last_name" type="text" class="validate">
+                                                    <input id="last_name" type="text" class="validate" name="rstatus">
                                                     <label for="last_name" style="font-size:20px; color:white;">Ticket no</label>
                                                 </div>
-                                        </form>
+                                      
 
 
                                         <button class="btn waves-effect waves-light right" type="submit" name="action">Check Status
     <i class="material-icons right">send</i>
-  </button>
+  </button>  </form>
+
 
 
                                         <br>

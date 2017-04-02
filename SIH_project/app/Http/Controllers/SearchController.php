@@ -310,4 +310,15 @@ public function live(Request $request)
 }
 
 
+public function ticket(Request $request)
+{
+    $r=$request->input('rstatus');
+    $q=\App\Report::where('ticket','LIKE', $r)->get(['college_name','city','message','course_name']);
+
+
+
+
+}
+
+
 }

@@ -29,6 +29,7 @@
     <script src="{{asset('js/un_course.js')}}"></script>
     <link href="/css/css1.css" rel="stylesheet" />
 </head>
+
 <body ng-app = "myModule" class="#b2dfdb teal lighten-4" >
     
     <nav class="nav-extended wow fadeInUp">

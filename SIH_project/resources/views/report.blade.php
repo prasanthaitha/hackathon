@@ -24,11 +24,7 @@
               <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
               <script src="startjs.js"></script>
     
-    <script>
-      $(document).ready(function() {
-    $('select').material_select();
-  });
-    </script>
+    
       
     </head>
     <body class="black">
@@ -189,7 +185,7 @@
         <div class="file-field input-field">
       <div class="btn">
         <span>File</span>
-        <input type="file" multiple>
+        <input type="file"  multiple >
       </div>
       <div class="file-path-wrapper">
         <input  class="file-path validate" type="text"  style="font-size:15px;color:white;" placeholder="Upload one or more files*">
@@ -218,5 +214,11 @@
       </div>
     </footer>
       
+
+      <script>
+      $(document).ready(function() {
+    $('select').material_select();
+  });
+    </script>
     </body>
         </html>

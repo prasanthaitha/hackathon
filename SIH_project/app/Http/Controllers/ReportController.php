@@ -22,7 +22,7 @@ class ReportController extends Controller
      		}
 
      		else
-     			return redirect('login');
+     			 return redirect('login');
      }
      public function ReportNow(Request $data){
 
@@ -61,7 +61,7 @@ class ReportController extends Controller
 
 		        
 		        $report->save(); // saving in db
-		        return 'your report is filed, Thank You';
+		        return view('redirect',compact('ticket'));
 		 
 
    
