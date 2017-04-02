@@ -81,6 +81,11 @@
         @yield('content')
     </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
+
+<script src="js/app.js"></script>
+
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
