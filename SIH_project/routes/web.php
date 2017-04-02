@@ -48,8 +48,11 @@ Route::GET('admin-password/reset','Admin\ForgotPasswordController@showLinkReques
 Route::POST('admin-password/reset','Admin\ResetPasswordController@reset');
 Route::GET('admin-password/reset/{token}','Admin\ResetPasswordController@showResetForm ')->name('admin.password.reset');
 
+Route::post('/reportx','ReportController@ReportNow');
+Route::get('/report','ReportController@ReportForm');
 
 
+Route::post('/report/check','ReportController@CheckStatus');
 
 
 
