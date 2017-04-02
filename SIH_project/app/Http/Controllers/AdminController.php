@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Report;
 
 class AdminController extends Controller
 {
@@ -25,6 +26,12 @@ class AdminController extends Controller
     public function index()
     {
         return view('admin.home');
+    }
+
+    public function show()
+    {
+            $repo = Report;
+            return $repo;
     }
 
 
