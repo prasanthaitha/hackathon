@@ -23,8 +23,47 @@ Route::get('/','SearchController@search');
 
 Route::post('send','mailController@send');
 Route::get('email','mailController@email');
+Route::get('/details/{uid}','SearchController@details');
+Route::get('course/{uid}','SearchController@course');
+Route::get('/category','SearchController@index');
+Route::get('/live','SearchController@live');
+Route::get('/uncol',function()
+{
+	return view('unappcol');
+}
 
-//Route::get('/search','SearchController@search');
+	);
+Route::get('/uncos',function()
+{
+	return view('unappcos');
+}
+
+	);
+Route::get('/ccol',function()
+{
+	return view('ccol');
+}
+
+	);
+Route::get('/ccos',function()
+{
+	return view('ccos');
+}
+
+	);
+Route::get('/dlp',function()
+{
+	return view('dlp');
+}
+
+	);
+
+
+
+
+   
+
+	
 //Route::get('/search/filter','SearchController@filter')->name('univ');
 
 
@@ -34,3 +73,5 @@ Route::get('email','mailController@email');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+

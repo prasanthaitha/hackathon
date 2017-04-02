@@ -1,0 +1,37 @@
+body{
+    font-family: Arial;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td{
+    border:1px solid gray;
+    padding : 5px;
+}
+
+th{
+    border:1px solid gray;
+    padding:px;
+    text-align:left;
+    cursor: pointer;
+}
+
+.arrow-up{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px sold black;
+    display : inline-block;
+}
+
+.arrow-down{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px sold black;
+    display : inline-block;
+}
