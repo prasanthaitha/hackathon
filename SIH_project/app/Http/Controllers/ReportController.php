@@ -160,8 +160,8 @@ class ReportController extends Controller
 
     public function pending()
     {
-    $rep->Report::where('status','=',0)->get();
-    return view('admin.pending',compact('rep');
+    $rep=Report::where('status','=',0)->get();
+    return view('admin.pending',compact('rep'));
 
     }
 	
