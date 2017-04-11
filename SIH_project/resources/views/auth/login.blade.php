@@ -30,7 +30,7 @@
     <div class="nav-wrapper" style="background-color: #004040;">
       <a href="./index.html" class="brand-logo" style="font-size: 3.5em;">&emsp;Find Fake</a>
       <ul class="right hide-on-med-and-down">
-        <li><a class="waves-effect waves-light btn" href="#">HOME<i class="material-icons right">home</i></a></li>
+        <li><a class="waves-effect waves-light btn" href="/">HOME<i class="material-icons right">home</i></a></li>
         </ul></nav>
     <br>
     <br>
@@ -109,7 +109,7 @@
                                     Forgot Password?
                                 </a>
                                 <h6 style="color:black;padding:0px 140px;">OR</h6>
-                                <a class="btn btn-link #1565c0 blue darken-3 " style="padding:0px 130px;" href="register.html">
+                                <a class="btn btn-link #1565c0 blue darken-3 " style="padding:0px 130px;" href="/register">
                                     Sign Up
                                 </a>
                             </div>
