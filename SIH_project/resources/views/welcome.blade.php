@@ -502,7 +502,7 @@
     <i class="material-icons right">send</i>
   </button>-->
 
-                                        <input type="submit" value="submit" class="waves-effect waves-light btn"><i class="material-icons right"></i></a>
+                                        <input type="submit" value="Report Now" class="waves-effect waves-light btn"><i class="material-icons right"></i></a>
 
 </form>
                                         <br>
