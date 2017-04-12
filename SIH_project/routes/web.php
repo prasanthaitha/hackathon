@@ -27,6 +27,7 @@ Route::get('/details/{uid}','SearchController@details');
 Route::get('course/{uid}','SearchController@course');
 Route::get('/category','SearchController@index');
 Route::get('/live','SearchController@live');
+Route::get('/fake/details/{unid}','SearchController@fakedetails');
 Route::get('/uncol',function()
 {
 	return view('unappcol');

@@ -231,7 +231,43 @@
 
         <!-- </form> -->
        
+    @if($fake!=NULL)
 
+                
+      <div style="background-color:#009688; margin:0px; padding:0px;">
+                <h3 style="font-family:'Ubuntu'; color:white; " class="center-align"> Fake Institutes </h3>
+
+                
+
+        <ul>
+            @foreach($fake as $fak)
+
+             <div class="row" style="background-color: #009688;">
+    <div class="col s12 m6 offset-m3">
+      <div class="card " style="width:700px;">
+       
+        <div class="card-content hoverable">
+
+            <li  style="font-family: 'Ubuntu Mono', monospace; font-size: 1.5em;"> <b>{{$fak->name}} </b></li> <br>
+            <li  style="font-family: 'Ubuntu Mono', monospace;">City:{{$fak->city}} &emsp;
+            State:{{$fak->state}}</li><br> &emsp;
+            <a href="/fake/details/{{$fak->unid}}"> View more details</a></li>
+
+
+            </div>
+      </div>
+    </div>
+  </div>
+
+            @endforeach
+        </ul>
+
+
+        </div>
+
+
+            
+        @endif
        
 
 
@@ -244,7 +280,7 @@
 
                 
       <div style="background-color:#009688; margin:0px; padding:0px;">
-                <h3 style="font-family:'Ubuntu'; color:white; " class="center-align"> Searched Institutes </h3>
+                <h3 style="font-family:'Ubuntu'; color:white; " class="center-align"> Authorised Institutes </h3>
 
                 
 

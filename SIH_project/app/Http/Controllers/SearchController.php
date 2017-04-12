@@ -27,18 +27,21 @@ class SearchController extends Controller
             
 		   if($q==NULL && $r==NULL)
 		   	{ $univs=NULL;
-		   	return view('welcome',compact('univs'));
+		   		$fake=NULL;
+		   	return view('welcome',compact('fake','univs'));
             }
 
 
 		else{
 		   $key=$request->category;
 		   $key2=$request->type;
-
+           
+           $fake=\App\Unapp_Inst::where('name','LIKE','%'.$q.'%')->where('city','LIKE','%'.$r.'%')->get();
 		      
 		   $univs=University::where('uname','LIKE','%'.$q.'%')->where('city','LIKE','%'.$r.'%')->get();
 
-            if(empty($univs[0])){
+            if(empty($univs[0]) && empty($fake[0])){
+            	      
                        return 'nothing found';
                                 }
             else{
@@ -180,7 +183,7 @@ class SearchController extends Controller
 				 //       			 $j1=$j1+1;
      //                         }
      //                         $univs=$u;
-				     		return view('welcome',compact('univs'));
+				     		return view('welcome',compact('fake','univs'));
 				     }
 				 }
 
@@ -253,6 +256,23 @@ public function details($uid)
 
 
 
+
+
+
+
+   return view('details',compact('udel','ucat','udet','ur'));
+
+
+}
+public function fakedetails($unid)
+{
+   $ufdel=\App\Unapp_Inst::where('unid',$unid)->get();
+  // return $udel;
+  
+   
+
+
+return $ufdel;
 
 
 
