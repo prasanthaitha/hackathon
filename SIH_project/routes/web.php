@@ -99,7 +99,7 @@ Route::get('/course',function()
 	);
 
 
-Route::post('/report/check','ReportController@CheckStatus');
+Route::get('/report/check','ReportController@CheckStatus');
 
 Route::get('verifyEmailFirst','Auth\RegisterController@verifyEmailFirst')->name('verifyEmailFirst');
 Route::get('verify/{email}/{verifyToken}','Auth\RegisterController@sendEmailDone')->name('sendEmailDone');

@@ -109,7 +109,9 @@
                </div>
 
                <div class="col m2">
-               <a href='www.nbaind.org/Files/AccreditedPrograms.aspx' style="color: #004040; font-family:'Ubuntu'">NAAC ACCREDITATED COURSES</a>
+                    <div class="links">
+                            <a href="http://www.nbaind.org/Files/AccreditedPrograms.aspx" style="color: #004040; font-family:'Ubuntu'">NAAC ACCREDITATED COURSES</a>
+                    </div>
                </div>    
 </div>
 
@@ -514,16 +516,16 @@
                                     <div class="card-content white-text">
                                         <span class="card-title center" style="font-size:30px;"><u>Report Status</u></span>
 
-                                        <form action="/ticket" method="get">
+                                        <form action="/report/check" method="get">
 
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input id="email" type="email" class="validate">
+                                                    <input name="email" id="email" type="email" class="validate">
                                                     <label for="email" style="font-size:20px; color:white;">Email</label>
                                                 </div>
 
                                                 <div class="input-field col s12">
-                                                    <input id="last_name" type="text" class="validate" name="rstatus">
+                                                    <input id="last_name" type="text" class="validate" name="ticket">
                                                     <label for="last_name" style="font-size:20px; color:white;">Ticket no</label>
                                                 </div>
                                       

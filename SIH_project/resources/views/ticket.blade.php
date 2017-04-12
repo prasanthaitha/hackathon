@@ -5,11 +5,14 @@
 </head>
 <body>
 
-{{$q[0]->college_name}}
-{{$q[0]->city}}
-{{$q[0]->course_name}}
-{{$q[0]->status}}
-
+College Name:{{$rep[0]->college_name}}
+<br>
+City:{{$rep[0]->city}}
+<br>
+Course_name:{{$rep[0]->course_name}}
+<br>
+Status:{{$r}}
+<br>
 
 <a href="/"> Go back to home </a>
 </body>

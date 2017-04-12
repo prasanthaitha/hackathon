@@ -66,16 +66,16 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {   
-        Session::flash('status','Registered! but verify your email to activate your account');
+        //Session::flash('status','Registered! but verify your email to activate your account');
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
-            'verifyToken'=> Str::random(40),
+          //  'verifyToken'=> Str::random(40),
         ]);
 
-        $thisUser = User::findOrFail($user->id);
-        $this->sendEmail($thisUser);
+       // $thisUser = User::findOrFail($user->id);
+       // $this->sendEmail($thisUser);
         return $user;
     }
 

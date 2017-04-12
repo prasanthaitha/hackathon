@@ -30,7 +30,7 @@ class ReportController extends Controller
 
      		
 		       	$user=User::findOrFail(Auth::user()->id);
-		       	
+		       	$tid = \App\Report::all()->last()->rid;
 		        $report = new Report;
 		        $report->message = $data->message;
 		     
@@ -48,20 +48,20 @@ class ReportController extends Controller
 		        $report->id = $user->id;
         		
 
-		        $report->save(); //saving in db
+		        // $report->save(); //saving in db
 
 		        
-		        $id = $report->rid;
+		       // $id = $report->rid;
 
 		        $flag = 170000;
-		        $Id = $flag + $id;
-		        $ticket = "UGC".(string) $Id;
+		        $Id = $flag + $tid + 1;
+		        $ticket = "UGC".(string)$Id;
 
 		        $report->ticket = $ticket;
 
 		        
 		        $report->save(); // saving in db
-
+                  // return $report->ticket; 
 		        return view('redirect',compact('ticket'));
 
 		        return $ticket.'is ur ticket no.';
@@ -73,22 +73,31 @@ class ReportController extends Controller
         
 }
 
-	public function CheckStatus(Request $data){
+	public function CheckStatus(Request $request){
 			
-				$user = array();
+				//$user = array();
 
-				$user[]=User::where(email == $data->email);
-     			
+				$user=User::where('email','LIKE',$request->input('email'))->get();
+               //return $user;     			
 
      			foreach($user as $u)
      			{
-     			$rep = Report::where(id == $u->id && ticket== $data->ticket);
-     			break;
+                   //return $u->id;
+     			$rep = Report::where('id','=',$u->id)->where('ticket','LIKE',$request->input('ticket'))->get();
+     			//break;
 
      			}
      			
-     			return $rep->status;
-     		
+     			if(($rep[0]->status)==0)
+                        {
+                            $r = 'not resolved';
+                            return view('ticket',compact('rep','r'));
+     		             }
+                else if(($rep[0]->status)==1)
+                        {
+                            $r = 'resolved';
+                            return view('ticket',compact('rep','r'));
+                         }
      		}
 		
 	public function repindex(){

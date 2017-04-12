@@ -63,14 +63,14 @@
           <label for="last_name"  style=" font-size:15px;color:white;">Last Name</label>
         </div>
       </div>
-      <div class="row">
+     <!--  <div class="row">
         <div class="input-field col s12">
            <i class="material-icons prefix">email</i>
             
           <input id="email" type="email" class="validate" required>
           <label for="email" data-error="wrong" data-success="right" style="font-size:15px; color:white;">Email Id*</label>
         </div>
-      </div>
+      </div> -->
         
         <div class="row">
         <div class="input-field col s12">
