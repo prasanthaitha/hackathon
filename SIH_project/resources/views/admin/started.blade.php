@@ -30,7 +30,7 @@
 <body class="#bbdefb blue lighten-4">
       <nav class="nav-extended wow fadeInUp">
     <div class="nav-wrapper" style="background-color: #004040;">
-      <a href="#" class="brand-logo" style="font-size: 3.5em;">&emsp;<i class="medium material-icons right">home</i></a>
+      <a href='admin/home' class="brand-logo" style="font-size: 3.5em;">&emsp;<i class="medium material-icons right">home</i></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a class="waves-effect waves-light btn">Profile<i class="material-icons right">group_work</i></a></li>
@@ -55,7 +55,7 @@
             </div>
              <div class="card-tabs">
       <ul class="tabs tabs-fixed-width">
-        <li class="tab"><a href="/repshowdetails">Report</a></li>
+        <li class="tab"><a href='/repshowdetails'>Report</a></li>
         <li class="tab"><a href="#test5">Colleges</a></li>
         <li class="tab"><a href="/showdetails">Universities</a></li>
       </ul>

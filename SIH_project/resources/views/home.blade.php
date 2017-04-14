@@ -11,6 +11,10 @@
                 <div class="panel-body">
                     You are logged in!
                 </div>
+                <div class="clo-lg-4 clo-lg-offset-4">
+                    <center><h3>Click below to see your reports</h3></center>
+                    <center><h2><a href="/tosee"><b>Your Reports</b></a></h2></center>
+                </div>
             </div>
         </div>
     </div>

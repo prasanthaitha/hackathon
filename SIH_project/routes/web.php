@@ -132,5 +132,8 @@ Route::get('/started',function()
 Route::get('/pendingreports','ReportController@pending');
 
 
+Route::resource ('tosee','toseecontroller');
+
+
 
 
