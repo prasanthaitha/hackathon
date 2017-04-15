@@ -1,11 +1,11 @@
-@extends('layouts.app1')
+@extends('layouts.app2')
 
 @section('body')
 	<br>
-	<a href="/report" class="btn btn-info">Add New Report</a>
-	<a href="/home" class="btn btn-info">Back to Home</a>
+	<a href="/toedit/create" class="btn btn-info">Add New Report</a>
+	<a href="/admin/home" class="btn btn-info">Back to Home</a>
 	<div class="clo-lg-4 clo-lg-offset-4">
-		<center><h1>Your Reports</h1></center>
+		<center><h1>Reports</h1></center>
 
 		<table class="table table-striped table-hover ">
 		  <thead>

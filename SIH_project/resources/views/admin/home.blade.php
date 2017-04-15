@@ -10,7 +10,8 @@
                 <div class="panel-body">
                     You are logged in as admin!
                     <br>
-                    <a href="/started">Get started</a>
+                    <center><h3>Click below To see All reports</h3></center>
+                    <a href="/toedit"><center><h2>Reports</h2></center></a>
 
                 </div>
                 <br>

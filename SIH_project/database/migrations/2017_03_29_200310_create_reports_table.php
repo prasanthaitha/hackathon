@@ -25,7 +25,7 @@ class CreateReportsTable extends Migration
             $table->string('college_name');
             $table->string('course_name')->nullable();
             $table->string('branch')->nullable();
-            $table->boolean('status');
+            $table->integer('status');
             $table->string('message')->nullable();
             $table->string('ticket')->unique();
             $table->integer('id')->unsigned()->nullable();

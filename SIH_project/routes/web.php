@@ -89,6 +89,7 @@ Route::POST('admin-password/reset','Admin\ResetPasswordController@reset');
 Route::GET('admin-password/reset/{token}','Admin\ResetPasswordController@showResetForm ')->name('admin.password.reset');
 
 Route::post('/reportx','ReportController@ReportNow');
+Route::post('/reportx1','ReportController@ReportStatus');
 Route::get('/report','ReportController@ReportForm');
 Route::get('/ticket','SearchController@ticket');
 
@@ -134,6 +135,8 @@ Route::get('/pendingreports','ReportController@pending');
 
 Route::resource ('tosee','toseecontroller');
 
+Route::resource ('toedit','Admin\toeditcontroller');
 
 
+Route::get('/toedit','Admin\toeditcontroller@index')->middleware('guest1');
 

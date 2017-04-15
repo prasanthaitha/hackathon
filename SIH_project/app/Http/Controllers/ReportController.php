@@ -67,11 +67,10 @@ class ReportController extends Controller
 		        return $ticket.'is ur ticket no.';
 		        return 'your report is filed, Thank You'.$ticket.'is your ticket number';
 
-		 
+	}
+    public function ReportStatus(Request $data){
 
-   
-        
-}
+    }
 
 	public function CheckStatus(Request $request){
 			

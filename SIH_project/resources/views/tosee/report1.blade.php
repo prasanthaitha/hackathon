@@ -5,7 +5,8 @@
 
 	<div class="clo-lg-4 clo-lg-offset-4">
 			<h1>Create New Report</h1>
-			<form class="form-horizontal">
+			<form class="form-horizontal" method="post" action="/reportx">
+				{{csrf_field()}}
 				  <fieldset>
 				    <legend>Legend</legend>
 				    <div class="form-group">
