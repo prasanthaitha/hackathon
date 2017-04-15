@@ -25,8 +25,9 @@
 				      <td>{{$report->course_name}}</td>
 				      <td>{{$report->message}}</td>
 				      <td>{{$report->status}}</td>
-				      <td>{{$report->ticket}}</td>
+				      <td><a href="{{'/toedit/'.$report->rid}}">{{$report->ticket}}</a></td>
 				      <span><td>{{$report->created_at->diffForHumans()}}</td></span>
+				      <td><a href="{{'/toedit/'.$report->rid.'/edit'}}">Edit Status</a></td>
 				    </tr>
 			    </tbody>
 		  @endforeach

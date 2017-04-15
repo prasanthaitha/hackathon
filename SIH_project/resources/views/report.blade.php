@@ -7,8 +7,8 @@
         <title>Find Fake</title>
       <!-- Latest compiled and minified CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-      <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+     <!--  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
     
          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -42,7 +42,7 @@
         <br>
         <br>
    <div class="row">
-        <div class="col s12 m6 offset-s3">
+        <div class="col s12 m6 offset-m3">
           <div class="card blue-grey darken-4">
             <div class="card-content white-text">
                 <span class="card-title center" style="font-size:35px; color:white;"><b><u>REPORT</u></b></span>

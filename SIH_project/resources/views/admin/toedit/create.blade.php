@@ -1,17 +1,22 @@
-@extends('layouts.app1')
+@extends('layouts.app2')
 
 @section('body')
 	<br>
-
+	<a href="/toedit" class="btn btn-info">Back</a>
 	<div class="clo-lg-4 clo-lg-offset-4">
-			<h1>Edit Report</h1>
-			<form class="form-horizontal" method="post" action="/reportx1">
+			<h1>Edit Report Status</h1>
+			<form class="form-horizontal" method="post" action="/toedit/@yield('editId')">
 				{{csrf_field()}}
+				{{method_field('PUT')}}
 				<fieldset>
 					<div class="form-group">
 				      <label for="status" class="col-lg-2 control-label">Status</label>
 				      <div class="col-lg-10">
-				        <input type="boolean" class="form-control" id="status" placeholder="Update Status">
+				        <input type="integer" class="form-control" name="status" value="@yield('editStatus')">
+				      </div>
+				      <br>
+				      <div class="col-lg-10 clo-lg-offset-2">
+				      	<button type="submit" class="btn btn-success">Submit</button>
 				      </div>
 				    </div>
 				 </fieldset>
@@ -20,3 +25,4 @@
 
 
 @endsection
+

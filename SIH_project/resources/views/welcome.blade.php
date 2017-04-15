@@ -136,11 +136,11 @@
                                     <form class="col s12 center" action="/" method="get">
                                         <div class="row">
                                             <div class="input-field col s6">
-                                                <input placeholder="Search College" name="university" id="txt_1" onKeyup='saveValue(this);' type="text" class="validate " style="background-color:black;color:white;">
+                                                <input placeholder="Search College" name="university" id="txt_1" onKeyup='saveValue(this);' type="text" class="validate " style="background-color:white;color:black;">
 
                                             </div>
                                             <div class="input-field col s6">
-                                                <input name="city" id="txt_2" onKeyup='saveValue(this);' type="text" class="validate" style="background-color:black; color:white;" placeholder="Search City">
+                                                <input name="city" id="txt_2" onKeyup='saveValue(this);' type="text" class="validate" style="background-color:white; color:black;" placeholder="Search City">
 
                                             </div>
 
@@ -161,7 +161,7 @@
                 </div>
             </div>
 
-            <div class="parallax"><img src="/images/i1.jpg" style="opacity:0.8;"></div>
+            <div class="parallax"><img src="/images/2.jpg" style="opacity:0.8;"></div>
 
         </div>
         <!-- 

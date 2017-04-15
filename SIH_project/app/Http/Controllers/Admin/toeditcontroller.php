@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Report;
 use App\Admin;
+use DB;
 
 
 class toeditcontroller extends Controller
@@ -19,11 +20,11 @@ class toeditcontroller extends Controller
      */
     public function index()
     {
-           // return '2';
             $reports=Report::all();
             return view('admin.toedit.edit',compact('reports'));
         
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -54,7 +55,9 @@ class toeditcontroller extends Controller
      */
     public function show($id)
     {
-        return $id;
+        $item = Report::where('rid','=',$id)->get();
+
+        return view('admin.toedit.show',compact('item'));
     }
 
     /**
@@ -65,7 +68,8 @@ class toeditcontroller extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Report::where('rid','=',$id)->get();
+        return view('admin.toedit.edit1',compact('item'));
     }
 
     /**
@@ -77,7 +81,11 @@ class toeditcontroller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $item = Report::where('rid','=',$id)->get();
+        // return $request->status;
+        $i = $request->status;
+        DB::table('reports')->where('rid',$id)->update(['status' => $i]);
+        return redirect('/toedit');
     }
 
     /**
