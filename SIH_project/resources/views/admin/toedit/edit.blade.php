@@ -2,7 +2,6 @@
 
 @section('body')
 	<br>
-	<a href="/toedit/create" class="btn btn-info">Add New Report</a>
 	<a href="/admin/home" class="btn btn-info">Back to Home</a>
 	<div class="clo-lg-4 clo-lg-offset-4">
 		<center><h1>Reports</h1></center>
