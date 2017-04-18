@@ -20,11 +20,17 @@
 		  </thead>
 		  @foreach($reports as $report)
 		  		<tbody>
+		  		<?php if(($report->status)==0)
+		  		          $r='Not resolved';
+		  		         else
+		  		         	$r='Resolved';
+                   ?>
+
 				    <tr class="active">
 				      <td>{{$report->college_name}}</td>
 				      <td>{{$report->course_name}}</td>
 				      <td>{{$report->message}}</td>
-				      <td>{{$report->status}}</td>
+				      <td>{{$r}}</td>
 				      <td>{{$report->ticket}}</td>
 				      <span><td>{{$report->created_at->diffForHumans()}}</td></span>
 				    </tr>

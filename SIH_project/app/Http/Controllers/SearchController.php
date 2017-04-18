@@ -42,7 +42,7 @@ class SearchController extends Controller
 
             if(empty($univs[0]) && empty($fake[0])){
             	      
-                       return 'nothing found';
+                       return view('nothing');
                                 }
             else{
                   	/*if(!empty($key)){

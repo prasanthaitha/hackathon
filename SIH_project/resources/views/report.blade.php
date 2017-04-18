@@ -12,17 +12,17 @@
     
          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-        <link rel="stylesheet" href="startcss.css">
+      <!--   <link rel="stylesheet" href="startcss.css">
         <link rel="stylesheet" href="./css/default.css">
         <link rel="stylesheet" href="./css/component.css">
-        <script src="js/modernizr.custom.js"></script>
+        <script src="js/modernizr.custom.js"></script> -->
 
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>           
               <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-              <script src="startjs.js"></script>
+            <!--   <script src="startjs.js"></script> -->
     
     
       
@@ -32,9 +32,9 @@
      <div class="navbar-fixed" style="z-index:1000">
     <nav style="height: 5em;" class="wow fadeInUp">
     <div class="nav-wrapper" style="background-color: #004040;">
-      <a href="./index.html" class="brand-logo" style="font-size: 3.5em;color:white;">&emsp;Find Fake</a>
+      <a href="/" class="brand-logo" style="font-size: 3.5em;color:white;">&emsp;Find Fake</a>
       <ul class="right hide-on-med-and-down">
-        <li><a class="waves-effect waves-light btn" href="#">HOME<i class="material-icons right">home</i></a></li>
+        <li><a class="waves-effect waves-light btn" href="/">HOME</a></li>
         </ul>
         </div>
         </nav>

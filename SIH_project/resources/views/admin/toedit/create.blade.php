@@ -14,9 +14,19 @@
 				      <div class="col-lg-10">
 				        <input type="integer" class="form-control" name="status" value="@yield('editStatus')">
 				      </div>
-				      <br>
-				      <div class="col-lg-10 clo-lg-offset-2">
+				      <br> <br> <br> <br>
+
+				          <div  class="col-m-4 col-md-offset-2" style="">
+		                     Note: Update Status '0' for Not resolved.<br>
+		                           Update Status '1' for Resolved.
+		                     
+		                           <br> 
+		                    </div>   
+
+                         <br>
+				      <div class="col-lg-10 col-lg-offset-2">
 				      	<button type="submit" class="btn btn-success">Submit</button>
+
 				      </div>
 				    </div>
 				 </fieldset>

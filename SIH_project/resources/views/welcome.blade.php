@@ -136,16 +136,16 @@
                                     <form class="col s12 center" action="/" method="get">
                                         <div class="row">
                                             <div class="input-field col s6">
-                                                <input placeholder="Search College" name="university" id="txt_1" onKeyup='saveValue(this);' type="text" class="validate " style="background-color:white;color:black;">
+                                                <input placeholder="Search College" name="university"   type="text" class="validate " style="background-color:white;color:black;">
 
                                             </div>
                                             <div class="input-field col s6">
-                                                <input name="city" id="txt_2" onKeyup='saveValue(this);' type="text" class="validate" style="background-color:white; color:black;" placeholder="Search City">
+                                                <input name="city"   type="text" class="validate" style="background-color:white; color:black;" placeholder="Search City">
 
                                             </div>
 
                                             <div class="input-field col s2 offset-m5">
-                                                <button class="btn waves-effect waves-light right" type="submit" name="action" onclick="showdesc()">Submit
+                                                <button class="btn waves-effect waves-light right" type="submit" name="action" >Submit
     <i class="material-icons right">send</i>
   </button>
                                             </div>
@@ -647,38 +647,9 @@
 
     </script>
 
+    
 
-    <script>
-        document.getElementById("txt_1").value = getSavedValue("txt_1");
-        document.getElementById("txt_2").value = getSavedValue("txt_2");
-
-        function saveValue(e) {
-
-            var id = e.id;
-            var val = e.value;
-            localStorage.setItem(id, val);
-        }
-
-        function getSavedValue(v) {
-
-            if (localStorage.getItem(v) == null) {
-                return "";
-            }
-            return localStorage.getItem(v);
-        }
-
-    </script>
-
-    <script>
-            showdesc = function() {
-                document.getElementById("cont").style.display = "none";
-                document.getElementById("Sail-desc").style.display = "block";
-            }
-            hidedesc = function() {
-                document.getElementById("cont").style.display = "block";
-                document.getElementById("Sail-desc").style.display = "none";
-            }
-        </script>
+    
 
 
 </body>
