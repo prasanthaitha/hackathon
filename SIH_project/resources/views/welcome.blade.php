@@ -88,7 +88,7 @@
         <br> <br>
         <div class="row">
        <div class="col m2">
-        <a href='/uncos' style="color: #004040; font-family:'Ubuntu';"> Unapproved Institute</a>
+        <a href='/uncol' style="color: #004040; font-family:'Ubuntu';"> Unapproved Institute</a>
         </div>
 
         <div class="col m2">
@@ -96,16 +96,16 @@
                </div>
 
                <div class="col m2">
-               <a href='/uncos' style="color: #004040; font-family:'Ubuntu'">Closed Institutes</a>
+               <a href='/ccol' style="color: #004040; font-family:'Ubuntu'">Closed Institutes</a>
                 </div>
 
 
                <div class="col m2">
-               <a href='/uncos' style="color: #004040; font-family:'Ubuntu'">Closed Courses</a>
+               <a href='/ccos' style="color: #004040; font-family:'Ubuntu'">Closed Courses</a>
                </div>
 
                <div class="col m2">
-               <a href='/uncos' style="color: #004040; font-family:'Ubuntu'">Approved Distance Courses</a>
+               <a href='/dlp' style="color: #004040; font-family:'Ubuntu'">Approved Distance Courses</a>
                </div>
 
                <div class="col m2">

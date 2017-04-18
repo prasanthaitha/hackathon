@@ -7,8 +7,8 @@
         <title>Team Geeks</title>
       <!-- Latest compiled and minified CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-      <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+     <!--  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
     
          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -26,8 +26,8 @@
               <script src="startjs.js"></script>
     
     
-    <script src="F:\js\Final/angular.min.js"></script>
-    <script src="F:\js\Final/list3.js"></script>
+    <script src="{{asset('js/angular.min.js')}}"></script>
+    <script src="{{asset('js/list3.js')}}"></script>
     <link href="css1.css" rel="stylesheet" />
 </head>
 <body ng-app = "myModule" class="#b2dfdb teal lighten-4" >
@@ -74,12 +74,12 @@
     </thead>
     <tbody>
     <tr ng-repeat="a in mytable| filter:searchText"  style="font-size:15px;font-family:georgia,serif;">
-    <td>{{a.aicte_id}}</td>
-    <td>{{a.institute_name}}</td>
-    <td>{{a.institute_type}}</td>
-    <td>{{a.address}}</td>
-    <td>{{a.state}}</td>
-    <td>{{a.city}}</td>
+    <td><% a.aicte_id %></td>
+    <td><% a.institute_name %></td>
+    <td><% a.institute_type %></td>
+    <td><% a.address %></td>
+    <td><%a.state %></td>
+    <td><% a.city %></td>
     </tr>
     </tbody>
     </table>

@@ -7,9 +7,9 @@
         <title>Team Geeks</title>
       <!-- Latest compiled and minified CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-      <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<!--       <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    
+ -->    
          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="/css/startcss.css">
@@ -83,14 +83,14 @@
     </thead>
     <tbody>
     <tr ng-repeat="a in mytable| filter:searchText"  style="font-size:15px;font-family:georgia,serif;">
-     <td>{{a.aicte_id}}</td>
-    <td>{{a.institute_name}}</td>
-    <td>{{a.institute_type}}</td>
-    <td>{{a.State}}</td>
-     <td>{{a.district}}</td>
-    <td>{{a.university}}</td>
-    <td>{{a.level}}</td>
-    <td>{{a.course}}</td>
+     <td><% a.aicte_id %></td>
+    <td><% a.institute_name%></td>
+    <td><% a.institute_type%></td>
+    <td><% a.State%></td>
+     <td><% a.district%></td>
+    <td><% a.university%></td>
+    <td><% a.level%></td>
+    <td><% a.course%></td>
     </tr>
     </tbody>
     </table>

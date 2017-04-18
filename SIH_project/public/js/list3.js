@@ -1,4 +1,10 @@
-var app = angular.module("myModule" , []).controller("mycontroller", function($scope){
+var app = angular.module("myModule" ,[],function($interpolateProvider)
+{
+    $interpolateProvider.startSymbol('<%');
+     $interpolateProvider.endSymbol('%>');
+});
+
+app.controller("mycontroller", function($scope){
      
     var mytable = [
         {aicte_id:"JSS Academy",institute_name:"S.V.PG COLLEGE	",institute_type:"noida",address:"Uttar Pradesh",state:"1-912922",city:"noida"},

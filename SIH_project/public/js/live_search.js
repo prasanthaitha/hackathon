@@ -1,4 +1,10 @@
-var app = angular.module("myModule" , []).controller("mycontroller", function($scope){
+var app = angular.module("myModule" ,[],function($interpolateProvider)
+{
+    $interpolateProvider.startSymbol('<%');
+     $interpolateProvider.endSymbol('%>');
+});
+
+app.controller("mycontroller", function($scope){
      
     var mytable = [
         {College_Name:"SRI VENKATESHWARA COLLEGE OF ARCHITECTURE",Pincode:"1-912922",City:"noida",State:"Uttar Pradesh"},
