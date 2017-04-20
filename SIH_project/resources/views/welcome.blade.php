@@ -24,8 +24,8 @@
         $(document).ready(function() {
             $('.slider').slider({
                 full_width: false,
-                interval: 5000,
-                transition: 1800,
+                interval: 1000,
+                transition: 1100,
                 height: 300,
             });
 
@@ -36,7 +36,7 @@
 
 </head>
 
-<body class="parallax-demo" style=>
+<body class="parallax-demo" >
     <header>
 
 
