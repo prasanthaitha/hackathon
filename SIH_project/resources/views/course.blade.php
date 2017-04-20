@@ -55,7 +55,7 @@
             <td>B.tech</td>
                 <td>CSE</td>
                 <td>4 years</td>
-                <td>First</td>
+                <td>UG</td>
                 <td>1.12.2007</td>
                 <td>1.12.2012</td>
             
@@ -67,7 +67,7 @@
             <td>B.tech</td>
                 <td>ME</td>
                 <td>4 years</td>
-                <td>First</td>
+                <td>UG</td>
                 <td>1.12.2007</td>
                 <td>1.12.2016</td>
             
@@ -79,7 +79,7 @@
             <td>B.tech</td>
                 <td>ECE</td>
                 <td>4 years</td>
-                <td>First</td>
+                <td>UG</td>
                 <td>1.12.2009</td>
                 <td>1.12.2017</td>
             
@@ -91,7 +91,7 @@
             <td>M.B.B.S</td>
                 <td>Neuro</td>
                 <td>5 years</td>
-                <td>First</td>
+                <td>UG</td>
                 <td>1.12.2007</td>
                 <td>1.12.2012</td>
             
@@ -103,7 +103,7 @@
             <td>M.B.B.S</td>
                 <td>cardio</td>
                 <td>5 years</td>
-                <td>First</td>
+                <td>UG</td>
                 <td>1.8.2002</td>
                 <td>1.12.2022</td>
             
@@ -115,7 +115,7 @@
             <td>M.B.B.S</td>
                 <td>Gyano</td>
                 <td>5 years</td>
-                <td>First</td>
+                <td>PG</td>
                 <td>1.12.2007</td>
                 <td>1.12.2008</td>
             
@@ -127,7 +127,7 @@
             <td>M.B.B.S</td>
                 <td>Physician</td>
                 <td>5 years</td>
-                <td>First</td>
+                <td>UG</td>
                 <td>1.12.2007</td>
                 <td>1.12.2012</td>
             
@@ -135,11 +135,11 @@
             </tr>
             
               <tr>
-            <td>Diploma</td>
-            <td>Diploma</td>
+            <td>Engineering</td>
+            <td>M.tech</td>
                 <td>Electronics</td>
                 <td>3 years</td>
-                <td>Second</td>
+                <td>PG</td>
                 <td>1.12.2007</td>
                 <td>1.12.2012</td>
             
@@ -151,7 +151,7 @@
             <td>L.L.B</td>
                 <td>civil</td>
                 <td>3 years</td>
-                <td>First</td>
+                <td>UG</td>
                 <td>1.12.2007</td>
                 <td>1.12.2012</td>
             

@@ -14,8 +14,19 @@ class CreateUrunsTable extends Migration
     public function up()
     {
         Schema::create('uruns', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+             $table->integer('uid')->unsigned();
+            $table->integer('coid')->unsigned();
+            $table->date('start_date')->nullable();
+
+            $table->date('end_date')->nullable();
+            $table->enum('mode',['Regular','Distance','Regular and Distance']);
+            
+            $table->primary(['uid', 'coid']);
+
+            
+            $table->foreign('uid')->references('uid')->on('universities')->onDelete('cascade');
+
+            $table->foreign('coid')->references('coid')->on('courses')->onDelete('cascade');
         });
     }
 

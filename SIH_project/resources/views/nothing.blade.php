@@ -49,7 +49,7 @@
                    
 
         
-           <form method="get" action="/reportx">
+           <form method="get" action="/report">
 		       <button class="btn waves-effect waves-light right" type="submit" name="action">Report here
 		    <i class="material-icons right">send</i>
 		  </button>

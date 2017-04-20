@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 class ReportController extends Controller
 {
-    //
+    
 
 
      public function ReportForm(){
@@ -35,9 +35,9 @@ class ReportController extends Controller
 		        $report->message = $data->message;
 		     
 
-		      	  $report->college_name= $data->college_name;
-		      	  $report->locality = $data->locality;
-		          $report->pincode = $data->pincode;
+		      	$report->college_name= $data->college_name;
+		      	$report->locality = $data->locality;
+		        $report->pincode = $data->pincode;
 		      	  $report->city = $data->city;
 		          $report->state = $data->state;
 		        $report->degree = $data->degree;
