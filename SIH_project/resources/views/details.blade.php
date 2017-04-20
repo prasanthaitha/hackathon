@@ -35,9 +35,9 @@
     <div class="navbar-fixed" style="z-index:1000">
         <nav style="height: 5em;" class="wow fadeInUp">
             <div class="nav-wrapper" style="background-color: #004040;">
-                <a href="./index.html" class="brand-logo" style="font-size: 3.5em;">&emsp;Find Fake</a>
+                <a href="/" class="brand-logo" style="font-size: 3.5em;">&emsp;Find Fake</a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a class="waves-effect waves-light btn" href="#">HOME<i class="material-icons right">home</i></a></li>
+                    <li><a class="waves-effect waves-light btn" href="/">HOME<i class="material-icons right">home</i></a></li>
                 </ul>
             </div>
         </nav>
@@ -54,7 +54,7 @@
                 <li><a href="#home" style="font-size:30px;font-family:georgia,serif;color:white; padding:05px 30px;">Basic Details</a></li><br>
                 <li><a href="#news" style="font-size:30px;font-family:georgia,serif;color:white;  padding:05px 30px;">Contact </a></li><br>
                 <li><a href="#contact" style="font-size:30px;font-family:georgia,serif;color:white;  padding:05px 30px;">Address</a></li><br>
-                <li><a href="#edu" style="font-size:30px;font-family:georgia,serif;color:white;  padding:05px 30px;">Map</a></li><br>
+                <li><a href="#map" style="font-size:30px;font-family:georgia,serif;color:white;  padding:05px 30px;">Map</a></li><br>
             </ul>
 
         </div>
@@ -62,9 +62,10 @@
         <div class="col s9 offset-m4">
             <br> @foreach($udel as $udel2)
             <h4 style="color:;font-family:georgia,serif;"> {{$udel2->uname}}<i class="medium material-icons left">business</i> </h4>@endforeach
-            <h6 style="color:;font-family:georgia,serif;"> JSSATE CAMPUS UTTARAHALLI-KENGERI ROAD BANGALORE 560060 <i class="small material-icons left">location_on</i> </h6>
-            <br> @foreach($udel as $udel2)
-            <h5 style="color:;font-family:georgia,serif;">{{$udel2->uname}}<i class="small material-icons left">language</i> </h5>@endforeach
+           <!--  <h6 style="color:;font-family:georgia,serif;"> JSSATE CAMPUS UTTARAHALLI-KENGERI ROAD BANGALORE 560060 <i class="small material-icons left">location_on</i> </h6> -->
+
+            <!-- <br> @foreach($udel as $udel2)
+            <h5 style="color:;font-family:georgia,serif;">{{$udel2->uname}}<i class="small material-icons left">language</i> </h5>@endforeach -->
             <h5 style="color:;font-family:georgia,serif; padding:9px 90px;"><b>Basic Details</b><i class="small material-icons left">view_headline</i> </h5>
         </div>
     </div>
@@ -75,7 +76,7 @@
         <div class="col s12 m8 offset-s1 offset-m4">
             <div class="card hoverable white">
                 <div class="card-content gray-text">
-                    <h5 style="color:;font-family:georgia,serif;">Approved By : <b> AICTE </b><i class="small material-icons left">thumb_up</i> </h5><br> @foreach($udet as $udet2) {{$udet2->type}} @endforeach
+                    <h5 style="color:;font-family:georgia,serif;">Approved By : <b> AICTE </b><i class="small material-icons left">thumb_up</i> </h5><br> @foreach($udet as $udet2)<h4> Type: {{$udet2->type}} </h4>@endforeach
 
                     <!--                <h5 style="color:;font-family:georgia,serif;">University : A.K.T.U. University</b><i class="small material-icons left">group_work</i> </h5><br>-->
                     <h5 style="color:;font-family:georgia,serif;">Courses Details : <a href="/course">Click Here</a><i class="small material-icons left ">fast_forward</i></h5>
@@ -85,13 +86,18 @@
         </div>
     </div>
 
-    <h5 style="color:;font-family:georgia,serif; padding:9px 90px; position:absolute; left:500px;" ><b>Contact Information</b><i class="small material-icons left">contact_phone</i> </h5>
+<div class="" id="news">
+<br><br> <br> <br>
+    <h5 style="color:;font-family:georgia,serif; padding:9px 90px; position:absolute; left:500px;"  ><b>Contact Information</b><i class="small material-icons left">contact_phone</i> </h5>
+  </div>
+  <br> <br>  
     <br>
     <br>
     <div class="row">
         <div class="col s12 m8 offset-s1 offset-m4">
             <div class="card hoverable white">
-                <div class="card-content gray-text">
+                <div class="card-content gray-text" id="contact">
+                <br><br> <br> <br>
                     @foreach($udet as $udet2)
                     <h5 style="color:;font-family:georgia,serif;">Website : {{$udet2->website}}<i class="small material-icons left">email</i> </h5><br> @endforeach
                     <h5 style="color:;font-family:georgia,serif;"> Phone : 80 - 28611902 <i class="small material-icons left">call</i> </h5><br>
@@ -105,8 +111,9 @@
    <!-- <h5 style="color:;font-family:georgia,serif; padding:9px 90px; position:absolute; left:500px;"><b>Address  </b><i class="small material-icons left">location_on</i> </h5>@foreach($udet as $udet2)
     <h6 style="color:;font-family:serif; padding:9px 90px; font-size:20px ;  position:absolute; left:500px;"> {{$udet2->locality}} -{{$udet2->pincode}} </h6>@endforeach -->
 
-<div class="row">
-  <div class="col m6 offset-m4">   
+<div class="row"> 
+  <div class="col m6 offset-m4" id="map"> 
+    <br><br> <br> <br>
     <h5><b>MAP</b></h5>
     <div id="map"></div>
     </div>  
@@ -122,8 +129,8 @@
     <script>
         function initMap() {
             var uluru = {
-                lat: -25.363,
-                lng: 131.044
+                lat: 28.7041,
+                lng: 77.1025
             };
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 4,
