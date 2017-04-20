@@ -34,11 +34,11 @@
     
     <nav class="nav-extended wow fadeInUp">
     <div class="nav-wrapper" style="background-color: #004040;">
-      <a href="#" class="brand-logo" style="font-size: 3.5em;">&emsp;Find Fake</a>
+      <a href="/" class="brand-logo" style="font-size: 3.5em;">&emsp;Find Fake</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a class="waves-effect waves-light btn">Log In<i class="material-icons right">perm_identity</i></a></li>
-        <li><a class="waves-effect waves-light btn">Register<i class="material-icons right">email</i></a></li>
+        <li><a class="waves-effect waves-light btn" href="/login">Log In<i class="material-icons right"></i></a></li>
+        <li><a class="waves-effect waves-light btn" href="/register">Register<i class="material-icons right"></i></a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a class="waves-effect waves-light btn">Log In<i class="material-icons right">perm_identity</i></a></li>

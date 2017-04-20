@@ -268,15 +268,6 @@ public function fakedetails($unid)
 {
    $ufdel=\App\Unapp_Inst::where('unid',$unid)->get();
   // return $udel;
-  
-   
-
-
-return $ufdel;
-
-
-
-
    return view('details',compact('udel','ucat','udet','ur'));
 
 
