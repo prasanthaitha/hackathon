@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use DB;
 
 class CreateReportsTable extends Migration
 {
@@ -30,7 +31,7 @@ class CreateReportsTable extends Migration
             $table->string('ticket')->unique();
             $table->integer('id')->unsigned()->nullable();
             $table->foreign('id')->references('id')->on('users')->onDelete('cascade');
-            $table->timestamps();
+            $table->timestamps()->default(\DB::raw('CURRENT_TIMESTAMP'));
         });
     }
 
