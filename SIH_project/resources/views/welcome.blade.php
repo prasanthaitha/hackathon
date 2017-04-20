@@ -366,15 +366,15 @@
                             <div class="col s6 m3">
                                 <div class="card medium">
                                     <div class="card-image">
-                                        <img src="/images/management.jpg">
-                                        <span class="card-title">Manangement</span>
+                                        <img src="/images/engg.jpg">
+                                        <span class="card-title">Engineering</span>
                                     </div>
                                     <div class="card-content">
                                         <p>Discover the latest opportunities in the Management sector.</p>
                                     </div>
                                     <div class="card-action">
                                         <!--  <a href="category.html#manage"><b>Explore</b></a> -->
-                                        <a href="/category">Engineering</a>
+                                        <a href="/category">Explore</a>
                                     </div>
                                 </div>
                             </div>
@@ -382,14 +382,14 @@
                             <div class="col s6 m3">
                                 <div class="card medium">
                                     <div class="card-image">
-                                        <img src="/images/engg.jpg">
-                                        <span class="card-title">Engineering</span>
+                                        <img src="/images/management.jpg">
+                                        <span class="card-title">Managemnent</span>
                                     </div>
                                     <div class="card-content">
                                         <p>Discover the latest opportunities in the Engineering sector.</p>
                                     </div>
                                     <div class="card-action">
-                                        <a href="category.html#engg"><b>Explore</b></a>
+                                        <a href="/category"><b>Explore</b></a>
                                     </div>
                                 </div>
 
@@ -407,7 +407,7 @@
                                         <p>Discover the latest opportunities in the Medical sector.</p>
                                     </div>
                                     <div class="card-action">
-                                        <a href="category.html#med"><b>Explore</b></a>
+                                        <a href="/category"><b>Explore</b></a>
                                     </div>
                                 </div>
                             </div>
@@ -422,7 +422,7 @@
                                         <p>Discover the latest opportunities in the Law sector.</p>
                                     </div>
                                     <div class="card-action">
-                                        <a href="category.html#law"><b>Explore</b></a>
+                                        <a href="/category"><b>Explore</b></a>
                                     </div>
                                 </div>
                             </div>
@@ -439,7 +439,7 @@
                                         <p>Discover the latest opportunities in the Sports fields.</p>
                                     </div>
                                     <div class="card-action">
-                                        <a href="category.html#engg"><b>Explore</b></a>
+                                        <a href="/category"><b>Explore</b></a>
                                     </div>
                                 </div>
                             </div>
@@ -454,7 +454,7 @@
                                         <p>Discover the latest opportunities in the Commerce sector.</p>
                                     </div>
                                     <div class="card-action">
-                                        <a href="category.html#engg"><b>Explore</b></a>
+                                        <a href="/category"><b>Explore</b></a>
                                     </div>
                                 </div>
 
@@ -472,7 +472,7 @@
                                         <p>Discover the latest opportunities in the Design field.</p>
                                     </div>
                                     <div class="card-action">
-                                        <a href="category.html#engg"><b>Explore</b></a>
+                                        <a href="/category"><b>Explore</b></a>
                                     </div>
                                 </div>
                             </div>
@@ -487,7 +487,7 @@
                                         <p>Discover the latest opportunities in the Arts field.</p>
                                     </div>
                                     <div class="card-action">
-                                        <a href="category.html#engg"><b>Explore</b></a>
+                                        <a href="/category"><b>Explore</b></a>
                                     </div>
                                 </div>
                             </div>
